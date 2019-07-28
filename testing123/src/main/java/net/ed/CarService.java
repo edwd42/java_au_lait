@@ -1,9 +1,7 @@
 package net.ed;
 
 import java.io.IOException;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import javax.swing.JOptionPane;
 
 /*
  * see these resources for logging
@@ -11,34 +9,29 @@ import org.slf4j.LoggerFactory;
  * https://www.mkyong.com/logging/slf4j-logback-tutorial/
  */
 
-public class CarService {
+public class CarService implements ILogger {
 	
-	private final Logger logger = LoggerFactory.getLogger(CarService.class);
-	
-	public void process(String input) {
-		try {
+	public CarState process(String input) {
 			logger.debug("processing car: {}", input);
 			isValid(input);
 			CarState carState = CarState.from(input);
-		} catch (Exception e) {
-			logger.error("error: " + input);
-		}
-		
+			return carState;
 	}
 	
 	boolean isValid(String argument) {
-		// TODO Auto-generated method stub
 		try {
 			CarState carState = CarState.valueOf(argument);
 			logger.info(argument + " is valid");
 		} catch (RuntimeException e) {
+			// alert the user to what went wrong
+			// JOptionPane.showMessageDialog(null, "Invalid car state: " + argument);
+			logger.error(e.getMessage());
 			// wrap a RuntimeException around a checked exception
-			// its a nasty hack but better than throwing checked exceptions all over the place
-			IOException iox = new IOException("myIOException");
+			// its a nasty hack but better than throwing checked exceptions all over the place, IMHO
+			IOException iox = new IOException(e.getMessage());
 			throw new RuntimeException(iox);
 		}
 		return false;
-		
 	}
 
 }

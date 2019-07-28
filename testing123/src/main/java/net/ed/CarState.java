@@ -1,6 +1,6 @@
 package net.ed;
 
-public enum CarState {
+public enum CarState implements ILogger {
 	
 	DRIVING, WAITING, PARKING;
 	
@@ -16,9 +16,7 @@ public enum CarState {
 			try {
 				throw new Exception("error: invalid CarState" + state);
 			} catch (Exception e) {
-				// TODO Auto-generated catch block
-//				e.printStackTrace();
-				System.out.println("error: " + state);
+				logger.error("error: " + state);
 			}
 		}
 		return null;
