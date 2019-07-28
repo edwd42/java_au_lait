@@ -1,5 +1,7 @@
 package net.ed;
 
+import java.io.IOException;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -29,8 +31,11 @@ public class CarService {
 		try {
 			CarState carState = CarState.valueOf(argument);
 			logger.info(argument + " is valid");
-		} catch (IllegalStateException e) {
-			return false;
+		} catch (RuntimeException e) {
+			// wrap a RuntimeException around a checked exception
+			// its a nasty hack but better than throwing checked exceptions all over the place
+			IOException iox = new IOException("myIOException");
+			throw new RuntimeException(iox);
 		}
 		return false;
 		

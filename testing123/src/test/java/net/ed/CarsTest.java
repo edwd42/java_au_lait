@@ -24,7 +24,7 @@ public class CarsTest {
 	@Test
 	public void shouldReturnCarState() {
 		CarService carService = new CarService();
-		String service = "PARKING";
+		String service = "PARKIN";
 		try {
 			carService.isValid(service);
 			carService.process(service);
