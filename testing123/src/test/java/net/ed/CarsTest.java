@@ -15,5 +15,11 @@ public class CarsTest {
 		assertEquals("Porche",Porche.sayCarName("Porche"));
 		assertNotEquals("Porche",Porche.sayCarName("BMW"));
 	}
+	
+	@Test
+	public void shouldReturnLogging() {
+		CarService carService = new CarService();
+		carService.process("BMW");
+	}
 
 }
