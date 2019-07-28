@@ -5,7 +5,7 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotEquals;
 
-public class CarsTest implements ILogger {
+public class CarTest implements ILogger {
 
 	@Test
 	public void shouldReturnCarName() {
