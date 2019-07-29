@@ -9,7 +9,7 @@ import javax.swing.JOptionPane;
  * https://www.mkyong.com/logging/slf4j-logback-tutorial/
  */
 
-public class CarService implements ILogger {
+public class CarService implements ILoggable {
 	
 	public CarState process(String input) {
 			logger.debug("processing car: {}", input);

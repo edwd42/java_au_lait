@@ -1,6 +1,6 @@
 package net.ed.car;
 
-public enum CarState implements ILogger {
+public enum CarState implements ILoggable {
 	
 	DRIVING, WAITING, PARKING;
 	

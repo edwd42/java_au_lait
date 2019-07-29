@@ -4,12 +4,12 @@ import org.junit.Test;
 
 import net.ed.car.Car;
 import net.ed.car.CarService;
-import net.ed.car.ILogger;
+import net.ed.car.ILoggable;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotEquals;
 
-public class CarTest implements ILogger {
+public class CarTest implements ILoggable {
 
 	@Test
 	public void shouldReturnCarName() {
