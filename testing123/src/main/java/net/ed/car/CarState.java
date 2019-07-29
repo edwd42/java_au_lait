@@ -1,5 +1,7 @@
 package net.ed.car;
 
+import net.ed.utils.ILoggable;
+
 public enum CarState implements ILoggable {
 	
 	DRIVING, WAITING, PARKING;

@@ -2,9 +2,9 @@ package net.ed.car;
 
 import org.junit.Test;
 
+import net.ed.utils.ILoggable;
 import net.ed.car.Car;
 import net.ed.car.CarService;
-import net.ed.car.ILoggable;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotEquals;

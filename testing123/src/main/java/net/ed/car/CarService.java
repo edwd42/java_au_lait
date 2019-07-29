@@ -3,6 +3,8 @@ package net.ed.car;
 import java.io.IOException;
 import javax.swing.JOptionPane;
 
+import net.ed.utils.ILoggable;
+
 /*
  * see these resources for logging
  * https://www.slf4j.org/docs.html
