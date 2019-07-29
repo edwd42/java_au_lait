@@ -1,4 +1,4 @@
-package net.ed;
+package net.ed.car;
 
 import java.io.IOException;
 import javax.swing.JOptionPane;

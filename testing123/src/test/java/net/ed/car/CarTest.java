@@ -1,6 +1,10 @@
-package net.ed;
+package net.ed.car;
 
 import org.junit.Test;
+
+import net.ed.car.Car;
+import net.ed.car.CarService;
+import net.ed.car.ILogger;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotEquals;

@@ -1,4 +1,4 @@
-package net.ed;
+package net.ed.car;
 
 public class Car {
 	
